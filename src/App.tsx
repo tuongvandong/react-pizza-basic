@@ -1,5 +1,8 @@
 import { useState } from "react";
-
+import Footer from "./layouts/Footer";
+import Header from "./layouts/Header";
+import HomePage from "./pages/HomePage";
+import MenuHeader from "./layouts/MenuHeader";
 const App = () => {
   const [name, setName] = useState("React Dev");
   const handelChangname = () => {
@@ -8,9 +11,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <div>{name}</div>
-
-      <button onClick={handelChangname}>Bấm vào đây</button>
+      <Header />
+      <MenuHeader />
+      <HomePage />
+      <Footer />
     </div>
   );
 };
